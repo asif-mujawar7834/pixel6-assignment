@@ -1,15 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaAngleLeft, FaAppleAlt } from "react-icons/fa";
 import { sidebarMenus } from "../constants";
 import { Link, useLocation } from "react-router-dom";
+import { useScreenSize } from "../hooks/useScreenSize";
 
 export const Sidebar = () => {
   const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
+  const screenSize = useScreenSize();
+
+  useEffect(() => {
+    if (screenSize.width <= 800) {
+      setOpen(true);
+    } else {
+      setOpen(false);
+    }
+  }, [screenSize.width <= 800]);
+
   return (
     <div
       className={`${
-        open ? "w-20" : "w-72"
+        open ? "w-20" : "w-full sm:w-72"
       } h-screen bg-[#f0f3f4] relative duration-300 p-5`}
     >
       <button

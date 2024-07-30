@@ -5,14 +5,11 @@ interface SubmitButtonProps {
   disabled?: boolean;
   isSubmitting?: boolean;
 }
-export const SubmitButton = ({ children, disabled }: SubmitButtonProps) => {
+export const SubmitButton = ({ children }: SubmitButtonProps) => {
   return (
     <button
-      className={`font-medium text-white p-3 rounded-md ${
-        disabled ? "bg-gray-700 cursor-not-allowed" : "bg-black"
-      }`}
+      className="font-medium text-white p-3 rounded-md bg-black"
       type="submit"
-      disabled={disabled}
     >
       {children}
     </button>

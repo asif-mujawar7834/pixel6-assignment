@@ -5,15 +5,18 @@ import { Customers } from "./pages/Customers";
 import { EditCustomer } from "./pages/EditCustomer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Emails } from "./pages/Emails";
+import { Notifications } from "./pages/Notifications";
 function App() {
   return (
     <BrowserRouter>
       <DashboardLayout>
         <Routes>
           <Route path="/" element={<Customers />} />
-          <Route path="/contact-us" element={<h1>Contact Us</h1>} />
           <Route path="/add-customer" element={<AddCustomer />} />
           <Route path="/customer/:id" element={<EditCustomer />} />
+          <Route path="/emails" element={<Emails />} />
+          <Route path="/notifications" element={<Notifications />} />
         </Routes>
         <ToastContainer
           position="bottom-right"
