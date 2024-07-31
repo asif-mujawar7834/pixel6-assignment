@@ -16,7 +16,7 @@ export const Customers = () => {
 
   const handleEdit = (customer: customerType) => {
     dispatch(setSelectedCustomer(customer));
-    navigate(`/customer/${customer.id}`);
+    navigate(`/pixel6-assignment/customer/${customer.id}`);
   };
 
   const handleDelete = (id: number) => {
@@ -93,7 +93,7 @@ export const Customers = () => {
 
   const noCustomerFound = (
     <div>
-      <Link to="/add-customer">
+      <Link to="/pixel6-assignment/add-customer">
         <h1 className="text-red-500 font-medium">
           No Customers found, Click here to add customers.
         </h1>

@@ -13,25 +13,25 @@ export const sidebarMenus = [
     id: 1,
     label: "Customers",
     icon: <MdDashboard />,
-    path: "/",
+    path: "/pixel6-assignment/",
   },
   {
     id: 2,
     label: "Add Customers",
     icon: <FaClipboardUser />,
-    path: "/add-customer",
+    path: "/pixel6-assignment/add-customer",
   },
   {
     id: 3,
     label: "Emails",
     icon: <FaEnvelope />,
-    path: "/emails",
+    path: "/pixel6-assignment/emails",
   },
   {
     id: 4,
     label: "Notifications",
     icon: <FaBell />,
-    path: "/notifications",
+    path: "/pixel6-assignment/notifications",
   },
 ];
 

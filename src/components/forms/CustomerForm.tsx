@@ -90,7 +90,7 @@ export const AddCustomerForms = () => {
       } else {
         dispatch(addCustomer({ ...values, id: Date.now() }));
       }
-      navigate("/");
+      navigate("/pixel6-assignment/");
     } catch (error) {
       console.error(error);
     }
