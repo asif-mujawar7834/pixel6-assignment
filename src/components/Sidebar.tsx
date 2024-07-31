@@ -21,7 +21,7 @@ export const Sidebar = () => {
     <div
       className={`${
         open ? "w-20" : "w-full sm:w-72"
-      } h-screen bg-[#f0f3f4] relative duration-300 p-5`}
+      } h-screen bg-[#ffffff] relative duration-300 p-5 border-r-2 border-r-gray-100`}
     >
       <button
         className={`absolute z-30 duration-300 -right-3 top-9 bg-[#081225] text-white rounded-full p-2 ${

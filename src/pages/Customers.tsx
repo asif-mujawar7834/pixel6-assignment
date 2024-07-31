@@ -24,8 +24,10 @@ export const Customers = () => {
   };
 
   const renderCustomers = (
-    <div className="bg-white border border-gray-300 shadow-md p-2 rounded-md">
-      <h1 className="text-lg font-medium mt-3 mb-6">Customer Records</h1>
+    <div className="bg-[#ffff] border border-gray-300 shadow-md p-2 rounded-md">
+      <h1 className="text-lg text-black font-bold mt-3 mb-6">
+        Customer Records
+      </h1>
       <section className="box-border h-4/5 overflow-hidden">
         <div className="overflow-auto rounded-md">
           <table className="p-2 w-full text-sm border border-[#E2E8F0]">
@@ -91,7 +93,7 @@ export const Customers = () => {
 
   const noCustomerFound = (
     <div>
-      <Link to="/">
+      <Link to="/add-customer">
         <h1 className="text-red-500 font-medium">
           No Customers found, Click here to add customers.
         </h1>
@@ -102,7 +104,7 @@ export const Customers = () => {
   return (
     <div className="relative">
       <Header heading="Customer List" />
-      <div className="p-5">
+      <div className="p-5 bg-[#fafafa]">
         {customers.length > 0 ? renderCustomers : noCustomerFound}
       </div>
     </div>

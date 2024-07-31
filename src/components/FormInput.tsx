@@ -36,15 +36,16 @@ export const FormInput = ({
 
       <div
         className={`flex gap-x-2 items-center border ${
-          error ? "border-red-500" : "border-gray-500"
-        } px-3 rounded-md font-medium text-[#081225]`}
+          error ? "border-red-500" : "border-gray-200"
+        } px-3 rounded-md font-medium text-[#081225] bg-[#f5f5f5]`}
       >
         {icon}
         <input
-          className={`w-full p-2 rounded-md placeholder:text-slate-500 outline-0`}
+          className={`w-full p-2 rounded-md placeholder:text-slate-500 outline-0 bg-transparent`}
           placeholder={placeholder}
           type={type}
           {...register(name)}
+          disabled={isLoading}
         />
         {isLoading && <Loader />}
       </div>
